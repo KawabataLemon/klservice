@@ -47,4 +47,4 @@ app.get('/article', (req, res) => {
 });
   
 
-app.listen(3000, 'klservice.org', () => {});
+app.listen(3000, () => {});
