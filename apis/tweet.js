@@ -15,7 +15,7 @@ class Tweet {
       if (err) {
         articleCallback(null)
       } else {
-        articleCallback(data.filter(el => (el.in_reply_to_user_id == null)).map(el => new Article(el.text, el.user.name, el.text, el.id)))
+        articleCallback(data.filter(el => (el.in_reply_to_user_id == null)).map(el => new Article(el.text, el.user.name, el.text, `http://twitter.com/statuses/${el.id_str}`)))
       }
     })
   }
