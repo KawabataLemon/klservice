@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.17.0",
+    "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "hatena-blog-api2": "git+https://github.com/sfpgmr/node-hatena-blog-api2.git",
