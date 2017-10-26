@@ -6,6 +6,7 @@ require('dotenv').config()
 const { Qiita } = require('./apis/qiita')
 const { Hatena } = require('./apis/hatena')
 const { Tweet } = require('./apis/tweet')
+const { Github } = require('./apis/github')
 
 app.use(cors())
 
@@ -26,7 +27,9 @@ app.get('/article/:type', function (req, res) {
         })
         break
       case 'github':
-        res.send('ぎふはぶの記事を取得します')
+        Github.getArticles(articles => {
+          res.send({ instances: articles })
+        })  
         break
       case 'blog':
         Hatena.getArticles(articles => {
